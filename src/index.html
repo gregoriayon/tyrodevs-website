@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Tyrodevs</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+    </style>
+  </head>
+
+  <body id="app" class="bg-white">
+    <nav
+      class="sticky top-0 z-10 border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900"
+    >
+      <div
+        class="container mx-auto flex flex-wrap items-center justify-between p-4"
+      >
+        <a href="#" class="flex items-center">
+          <img
+            src="../assets/images/tyrodevs-logo.png"
+            class="mr-3 h-12"
+            alt="tyrodevs Logo"
+          />
+        </a>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <svg
+            class="h-5 w-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div
+          class="hidden w-full md:items-center lg:flex lg:w-auto"
+          id="navbar-dropdown"
+        >
+          <ul
+            class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:gap-4 md:space-x-8 md:border-0 md:bg-white md:p-0 md:dark:bg-gray-900 lg:mt-0 lg:flex-row"
+          >
+            <li class="md:pl-8">
+              <a href="#" class="nav-link" aria-current="page">Home</a>
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                onClick="return alert('This website is under construction!')"
+                data-dropdown-toggle="dropdownNavbar"
+                class="navlink flex items-center justify-between dark:border-gray-700 dark:focus:text-white"
+              >
+                Products
+                <svg
+                  class="ml-2.5 h-2.5 w-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="dropdownMenu z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow dark:divide-gray-600 dark:bg-gray-700"
+              >
+                <!-- <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/6amMart.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>6amMart</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/eFood.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>eFood</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/6Cash.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>6Cash</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/6valley.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>6valley</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/GroFresh-150x150.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>GroFresh</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/6POS-150x150.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>6POS</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/Stackfood.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>StackFood</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/Hexacom-150x150.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>Hexacom</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/Demandium.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>Demandium</span></a
+                    >
+                  </li>
+                </ul> -->
+                <div class="flex justify-center py-1">
+                  <a
+                    href="#"
+                    class="text-primary block px-4 py-2 text-sm font-bold hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >View All Products</a
+                  >
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                onClick="return alert('This website is under construction!')"
+                data-dropdown-toggle="dropdownNavbartwo"
+                class="navlink flex items-center justify-between dark:border-gray-700 dark:focus:text-white"
+              >
+                Services
+                <svg
+                  class="ml-2.5 h-2.5 w-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbartwo"
+                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow dark:divide-gray-600 dark:bg-gray-700"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/005-box-150x150.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>Installation</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/002-customer-service-150x150.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>Customization</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                onClick="return alert('This website is under construction!')"
+                data-dropdown-toggle="dropdownNavbarthree"
+                class="navlink flex items-center justify-between dark:border-gray-700 dark:focus:text-white"
+              >
+                Company
+                <svg
+                  class="ml-2.5 h-2.5 w-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbarthree"
+                class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow dark:divide-gray-600 dark:bg-gray-700"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      ><img
+                        src="../assets/images/Group-1000002098-1-1.png"
+                        alt=""
+                        class="mr-2 h-6 w-6"
+                      /><span>About Us</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link" onClick="return alert('This website is under construction!')">Blog</a>
+            </li>
+          </ul>
+          <div class="flex justify-end md:ml-8">
+            <a href="#" class="btn-primary" onClick="return alert('This website is under construction!')">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="bg-gradient-to-b from-blue-100 to-gray-100 pb-14 text-center lg:bg-gradient-to-r lg:text-left"
+    >
+      <div class="container">
+        <div
+          class="flex flex-col flex-wrap items-center justify-between gap-8 pt-10 md:py-16 lg:flex-row"
+        >
+          <div class="flex max-w-prose flex-1 flex-col justify-center">
+            <p class="mb-3 font-medium md:text-2xl">
+              Solutions Beyond
+              <span class="text-blue-500">Expectations</span>
+            </p>
+
+            <h1
+              class="text-2xl font-semibold capitalize tracking-wide md:text-3xl xl:text-4xl"
+            >
+              We develop custom
+              <span class="font-extrabold text-blue-600"
+                >software solutions</span
+              >
+              that turn your vision into success.
+            </h1>
+            <p
+              class="mx-auto mt-8 max-w-lg text-sm md:text-base lg:mx-0 lg:max-w-none xl:text-lg"
+            >
+              Tyrodevs software solutions are designed to simplify your
+              operations, maximize your business growth, and reach your goal.
+            </p>
+          </div>
+
+          <div class="flex justify-center overflow-hidden lg:justify-end">
+            <lottie-player
+              src="../assets/images/business-group-meeting.json"
+              background="transparent"
+              speed="1"
+              class="-mt-28 w-full max-w-sm md:max-w-md"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+        <div
+          class="mb-4 flex flex-col items-center capitalize tracking-wide text-neutral-500"
+        >
+          <p>
+            Embracing innovative
+            <span class="font-semibold text-blue-500">tech</span> to reach
+            <span class="font-semibold text-blue-500">milestones</span>.
+          </p>
+        </div>
+        <!-- slider  -->
+        <div class="mx-auto max-w-5xl">
+          <div class="owl-carousel rounded-md bg-white py-3 shadow-xl">
+            <div class="item">
+              <img
+                src="../assets/images/djangoproject-ar21.svg"
+                alt="Image 1"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/python-horizontal.svg"
+                alt="Image 2"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/react-js-icon.png"
+                alt="Image 3"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/node-js-icon.png"
+                alt="Image 3"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/google_maps.svg"
+                alt="Image 4"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/mysql.svg"
+                alt="Image 5"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/django-rest-framework.png"
+                alt="Image 4"
+                class="w-full"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="../assets/images/android-logo.png"
+                alt="Image 6"
+                class="w-full"
+              />
+            </div>
+            <!-- Add more item divs for additional images -->
+          </div>
+        </div>
+        <!-- slider end  -->
+      </div>
+    </header>
+    <!-- header end  -->
+
+    <!---- service area start  ---->
+    <section class="py-20">
+      <div class="container sm:w-full">
+        <div
+          class="services grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="section__info text-center md:col-span-2 lg:text-left">
+            <h3 class="section__title mb-8 text-2xl font-semibold lg:text-3xl">
+              Explore Our - Business
+              <span class="block text-[1.1em] font-bold text-blue-500"
+                >Software Solutions</span
+              >
+            </h3>
+            <p
+              class="section__subtitle text-sm leading-relaxed text-neutral-600 lg:text-base"
+            >
+              We provide different services to kick-start your business,
+              maintain technical support for success, and continuously develop
+              feature-rich software solutions to keep your business aligned with
+              evolving trends in the software solution industry.
+            </p>
+          </div>
+          <div class="product-item active !bg-blue-500">
+            <div
+              class="grid aspect-square w-12 place-items-center rounded bg-white text-2xl text-blue-500 transition-all duration-200"
+            >
+              <i class="ti ti-movie"></i>
+            </div>
+            <h4 class="">Entertainment Website</h4>
+            <p class="">
+              Entertainment Purpose & video streaming, downloading platform
+              Solution
+            </p>
+          </div>
+          <div class="product-item active group !bg-amber-500">
+            <div
+              class="grid aspect-square w-12 place-items-center rounded bg-white text-2xl text-amber-500 transition-all duration-200"
+            >
+              <i class="ti ti-building-store"></i>
+            </div>
+            <h4 class="">eCommerce Website</h4>
+            <p class="">
+              Entertainment Purpose & video streaming, downloading platform
+              Solution
+            </p>
+          </div>
+          <div class="product-item active group !bg-emerald-500">
+            <div
+              class="grid aspect-square w-12 place-items-center rounded bg-white text-2xl text-emerald-500 transition-all duration-200"
+            >
+              <i class="ti ti-vocabulary"></i>
+            </div>
+            <h4 class="">Education Website</h4>
+            <p class="">
+              Entertainment Purpose & video streaming, downloading platform
+              Solution
+            </p>
+          </div>
+
+          <div class="product-item active group !bg-red-500">
+            <div
+              class="grid aspect-square w-12 place-items-center rounded bg-white text-2xl text-red-500 transition-all duration-200"
+            >
+              <i class="ti ti-hanger"></i>
+            </div>
+            <h4 class="">Clothing Website</h4>
+            <p class="">
+              Entertainment Purpose & video streaming, downloading platform
+              Solution
+            </p>
+          </div>
+          <div class="product-item active group !bg-fuchsia-500">
+            <div
+              class="grid aspect-square w-12 place-items-center rounded bg-white text-2xl text-fuchsia-500 transition-all duration-200"
+            >
+              <i class="ti ti-barbell"></i>
+            </div>
+            <h4 class="">Accesories Website</h4>
+            <p class="">
+              Entertainment Purpose & video streaming, downloading platform
+              Solution
+            </p>
+          </div>
+          <div class="product-item active group !bg-cyan-500">
+            <div
+              class="grid aspect-square w-12 place-items-center rounded bg-white text-2xl text-cyan-500 transition-all duration-200"
+            >
+              <i class="ti ti-news"></i>
+            </div>
+            <h4 class="">News Website</h4>
+            <p class="">
+              Entertainment Purpose & video streaming, downloading platform
+              Solution
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---- service area end  ---->
+
+    <!-- Discover start -->
+    <section class="bg-white py-10">
+      <div class="container">
+        <div
+          class="relative min-h-[20rem] overflow-hidden rounded-xl bg-[url(https://6amtech.com/wp-content/uploads/2023/09/Frame-1597883828.svg)] bg-cover bg-no-repeat"
+        >
+          <div class="absolute left-[10%] top-1/2 z-10 -translate-y-1/2">
+            <h2 class="max-w-md text-4xl text-white">
+              Start your digital business today.
+            </h2>
+            <a
+              href=""
+              class="mt-8 inline-block rounded-md bg-white px-6 py-3 font-semibold"
+              >Learn More</a
+            >
+          </div>
+          <img
+            src="../assets/images/tyrodevs-products-show-banner.png"
+            alt=""
+            class="absolute bottom-0 right-0 top-0 h-full"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Discover end -->
+
+    <!-- short about start -->
+    <section class="methodology bg-white py-20">
+      <div
+        class="container flex flex-col items-center gap-12 text-center lg:flex-row"
+      >
+        <div class="lg:w-1/2 lg:text-start">
+          <h2 class="text-2xl font-semibold sm:text-3xl">
+            Our
+            <span class="font-bold text-blue-500">End-to-End Solution</span>
+            is Engineered to Fulfill Your
+            <span class="font-bold text-blue-500">Unique Expectations!</span>
+          </h2>
+          <p class="mt-4 text-sm tracking-wider text-neutral-600 md:text-base">
+            Our integrated methodology ensures that businesses can dedicate
+            their attention to core competencies, while entrusting us with
+            software development and management.
+          </p>
+
+          <div
+            class="mt-6 flex justify-center gap-6 text-sm font-semibold lg:justify-start lg:text-base"
+          >
+            <ul class="text-left">
+              <li class="py-2">
+                <span class="text-primary px-2 font-bold">&#x274D;</span
+                >Discovery & Analysis
+              </li>
+              <li class="py-2">
+                <span class="text-primary px-2 font-bold">&#x274D;</span>Design
+              </li>
+            </ul>
+            <ul class="text-left">
+              <li class="py-2">
+                <span class="text-primary px-2 font-bold">&#x274D;</span
+                >Development
+              </li>
+              <li class="py-2">
+                <span class="text-primary px-2 font-bold">&#x274D;</span>Testing
+              </li>
+            </ul>
+            <ul class="text-left">
+              <li class="py-2">
+                <span class="text-primary px-2 font-bold">&#x274D;</span
+                >Deployment
+              </li>
+              <li class="py-2">
+                <span class="text-primary px-2 font-bold">&#x274D;</span
+                >Maintenance
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="items-center lg:flex lg:w-1/2 lg:justify-end">
+          <lottie-player
+            src="../assets/images/business-strategy.json"
+            background="transparent"
+            speed="1"
+            class="-mb-10 -mt-32 w-full max-w-lg md:-mb-16 md:-mt-40 md:max-w-lg"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+    </section>
+    <!-- short about end -->
+
+    <!-- short product instruction start -->
+    <section class="section-half-bg py-20">
+      <div class="container">
+        <div class="mx-auto max-w-xs md:max-w-4xl">
+          <div class="mb-16 text-center">
+            <h2 class="text-2xl font-bold md:text-3xl">
+              Plan. Execute. <span class="text-blue-500">Conquer.</span>
+            </h2>
+            <p
+              class="mx-auto mt-3 max-w-xl text-sm text-neutral-600 md:text-base"
+            >
+              Dive into our latest company news updates, engaging blogs &
+              articles, and informative product documentation for better
+              understanding.
+            </p>
+          </div>
+          <div class="grid gap-10 md:grid-cols-3 md:gap-4 lg:gap-10">
+            <div class="service-item">
+              <img
+                src="../assets/images/installations.webp"
+                alt=""
+                class="-mt-3 w-full"
+              />
+              <div class="my-6 text-center">
+                <h3 class="mb-2 font-bold md:text-lg">Installation</h3>
+                <p class="mb-5 text-sm md:text-base">
+                  Complete end-to-end software installation service.
+                </p>
+                <button type="button" class="btn-outline">Learn More</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <img
+                src="../assets/images/customization.webp"
+                alt=""
+                class="-mt-3 w-full"
+              />
+              <div class="my-6 text-center">
+                <h3 class="mb-2 font-bold md:text-lg">Customization</h3>
+                <p class="mb-5 text-sm md:text-base">
+                  Tailored solutions for unique business needs.
+                </p>
+                <button type="button" class="btn-outline">Learn More</button>
+              </div>
+            </div>
+            <div class="service-item">
+              <img
+                src="../assets/images/development.webp"
+                alt=""
+                class="-mt-3 w-full"
+              />
+              <div class="my-6 text-center">
+                <h3 class="mb-2 font-bold md:text-lg">Development</h3>
+                <p class="mb-5 text-sm md:text-base">
+                  Expert development services for web & mobile.
+                </p>
+                <button type="button" class="btn-outline">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- short product instruction start -->
+
+    <!-- Discover start -->
+    <!-- <section class="bg-white py-10">
+      <div class="container">
+        <div
+          class="relative min-h-[20rem] overflow-hidden rounded-xl bg-[url(https://6amtech.com/wp-content/uploads/2023/09/Frame-1597883828.svg)] bg-cover bg-no-repeat"
+        >
+          <div class="absolute left-[10%] top-1/2 z-10 -translate-y-1/2">
+            <h2 class="max-w-md text-4xl text-white">
+              Start Your eCommerce Business Today
+            </h2>
+            <a
+              href=""
+              class="mt-8 inline-block rounded-md bg-white px-6 py-3 font-semibold"
+              >Learn More</a
+            >
+          </div>
+          <img
+            src="https://6amtech.com/wp-content/uploads/2023/09/Mask.webp"
+            alt=""
+            class="absolute bottom-0 right-0 top-0 h-full"
+          />
+        </div>
+      </div>
+    </section> -->
+
+    <section class="py-20">
+      <div class="container">
+        <div class="mx-auto max-w-sm md:max-w-5xl">
+          <div class="mb-12 text-center">
+            <h2 class="text-2xl font-bold md:text-3xl">
+              Discover. Explore. <span class="text-blue-500">Learn.</span>
+            </h2>
+            <p
+              class="mx-auto mt-3 max-w-xl text-sm text-neutral-600 md:text-base"
+            >
+              Dive into our latest company news updates, engaging blogs &
+              articles, and informative product documentation for better
+              understanding.
+            </p>
+          </div>
+
+          <div class="grid gap-7 md:grid-cols-3 md:gap-4 lg:gap-10">
+            <div class="blog-news-item">
+              <img src="../assets/images/image-2.png" alt="" class="w-full" />
+              <div class="content">
+                <h3 class="font-bold">Company News</h3>
+                <p class="">
+                  See how we’re doing as a company and keep our bonds in a tight
+                  knot as a tech family.
+                </p>
+                <a href="#" class=""
+                  >Learn More<span class="ml-2">&#8594;</span></a
+                >
+              </div>
+            </div>
+
+            <div class="blog-news-item">
+              <img
+                src="../assets/images/Group-1000002356.png"
+                alt=""
+                class="w-full"
+              />
+              <div class="content">
+                <h3 class="font-bold">Blogs & Articles</h3>
+                <p class="">
+                  Get all the freshly brewed content from tyrodevs resource
+                  center for in-depth learning.
+                </p>
+                <a href="#" class=""
+                  >Learn More<span class="ml-2">&#8594;</span></a
+                >
+              </div>
+            </div>
+
+            <div class="blog-news-item">
+              <img
+                src="../assets/images/image-3.png"
+                alt=""
+                class="w-full rounded-t-lg"
+              />
+              <div class="content">
+                <h3 class="font-bold">Documentations</h3>
+                <p class="">
+                  Learn how to use tyrodevs’s solutions with detailed technical
+                  documentation & user manual.
+                </p>
+                <a href="#" class=""
+                  >Learn More<span class="ml">&#8594;</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Discover end -->
+
+    <footer
+      class="footer-bg flex w-full flex-col items-center justify-center bg-blue-100"
+    >
+      <div class="container my-10 grid w-full gap-16 lg:grid-cols-9 lg:gap-0">
+        <div class="flex flex-col items-center md:items-start lg:col-span-4">
+          <img
+            src="../assets/images/tyrodevs-logo.png"
+            alt=""
+            class="w-40"
+          />
+          <p
+            class="mb-7 mt-4 max-w-md text-center text-sm leading-relaxed md:max-w-none md:text-left lg:text-justify"
+          >
+            Tyrodevs partners with businesses to deliver versatile software
+            solutions and services, enabling them to achieve sustained growth
+            and success in a rapidly evolving landscape.
+          </p>
+          <ul class="flex gap-5 text-xl">
+            <li>
+              <a
+                href="#"
+                class="text-neutral-500 hover:text-blue-700 duration-300"
+                ><i class="ti ti-brand-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral-500 hover:text-blue-700 duration-300"
+                ><i class="ti ti-brand-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral-500 hover:text-blue-700 duration-300"
+                ><i class="ti ti-brand-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-neutral-500 hover:text-blue-700 duration-300"
+                ><i class="ti ti-brand-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="flex w-full flex-wrap justify-center gap-4 md:gap-10 lg:col-span-5 lg:pl-10 xl:pl-16"
+        >
+          <div class="flex-1">
+            <h2 class="mb-3 text-sm font-bold md:text-base">Company</h2>
+            <div
+              class="grid w-max gap-3 text-[0.8rem] sm:grid-cols-2 md:gap-6 md:text-sm"
+            >
+              <div class="flex flex-col gap-3">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Service Policy</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+              <div class="flex flex-col gap-3">
+                <a href="#">Support Policy</a>
+                <a href="#">News</a>
+                <a href="#">FAQ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <h2 class="mb-3 text-sm font-bold md:text-base">Contact Us</h2>
+            <div class="flex flex-col gap-3 text-[0.8rem] md:text-sm">
+              <a href="#" class="flex items-center gap-4"
+                ><i class="ti ti-map-pin-filled text-[1.25em]"></i>
+                <span>Block-B, House-98, Baipayl, Savar, Dhaka-1349</span></a
+              >
+              <a href="#" class="flex items-center gap-4"
+                ><i class="ti ti-phone-call text-[1.25em]"></i>
+                <span>+8801795095847</span></a
+              >
+              <a href="#" class="flex items-center gap-4"
+                ><i class="ti ti-brand-whatsapp text-[1.25em]"></i>
+                <span>+8801621801821</span></a
+              >
+              <a href="#" class="flex items-center gap-4"
+                ><i class="ti ti-mail-filled text-[1.25em]"></i>
+                <span>support@tyrodevs.com</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 w-full bg-blue-100 p-4 text-center shadow-teal-900 shadow-xl text-xs sm:text-sm">
+        <p class="">© 2020-2023 tyrodevs. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- <script src="https://unpkg.com/petite-vue" defer init></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
